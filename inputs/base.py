@@ -1,7 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import Generator, Optional
 from datetime import datetime
-from detector.data_models import FrameData, GPSCoordinate
+try:
+    from detector.data_models import FrameData, GPSCoordinate
+except ImportError:
+    from data_models import FrameData, GPSCoordinate
 
 class BaseVideoSource(ABC):
     @abstractmethod

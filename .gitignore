@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Runtime databases & logs
+*.db
+*.db-journal
+*.sqlite
+queue.db
+
+# Test outputs & caches
+.pytest_cache/
+.coverage
+htmlcov/
+output/
+data/quarantine_*.jsonl
+first_frame_saved.jpg
+
+# Weights and heavy models (downloaded on demand)
+*.pt
+*.pth
+*.onnx

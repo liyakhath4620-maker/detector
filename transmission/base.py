@@ -1,5 +1,8 @@
 from abc import ABC, abstractmethod
-from detector.data_models import PotholeRecord
+try:
+    from detector.data_models import PotholeRecord
+except ImportError:
+    from data_models import PotholeRecord
 
 class BaseTransmitter(ABC):
     @abstractmethod

@@ -2,8 +2,12 @@ import cv2
 import logging
 from datetime import datetime, timedelta
 from typing import Generator, Optional
-from detector.inputs.base import BaseVideoSource
-from detector.data_models import FrameData
+try:
+    from detector.inputs.base import BaseVideoSource
+    from detector.data_models import FrameData
+except ImportError:
+    from inputs.base import BaseVideoSource
+    from data_models import FrameData
 
 logger = logging.getLogger(__name__)
 

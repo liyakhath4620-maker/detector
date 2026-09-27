@@ -1,9 +1,19 @@
+import sys
+from pathlib import Path
+root_dir = str(Path(__file__).resolve().parent.parent)
+if root_dir not in sys.path:
+    sys.path.insert(0, root_dir)
+
 import os
 import cv2
 import numpy as np
 import logging
 from datetime import datetime
-from detector.inputs.video_file import VideoFileSource
+
+try:
+    from detector.inputs.video_file import VideoFileSource
+except ImportError:
+    from inputs.video_file import VideoFileSource
 
 logging.basicConfig(level=logging.INFO)
 
